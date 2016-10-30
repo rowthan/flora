@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<title id="i18n_readium_library">Library</title>
+	<link rel="stylesheet" type="text/css" href="/css/library.css" />
+
+	<script src="/lib/modernizr-2.5.3.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+	<div class="navbar navbar-fixed-top">
+			<div class="container" style="width: 100%">
+				<a title="FloraReader" accesskey="i" class="brand" href="/views/library.html" id='bar-logo'>
+				</a>
+				<ul class="nav pull-right">
+					<li id="add-book-li">
+						<a title="Add a new ePUB" accesskey="a" href="#add-book-modal" id="add-book-btn" data-toggle="modal" role="button">
+							<img src="/images/add.png" class="big" alt="" />
+							<span class="offscreenText">Add a new EPUB</span>
+						</a>
+					</li>
+				</ul>
+		</div>
+	</div>
+
+
+	<div class='library-container'><!--当没有书的时候回出现-->
+		<div id="library-books-list">
+			<div id="loading-message">
+				<h2>Loading Library</h2>
+			</div>
+		</div>
+	</div>
+
+		<div id="add-book-modal" class="modal fade"><!--add panel-->
+			<div class="offscreenText">Add Book Start</div>
+
+			<div class="modal-header">
+				<h3 tabindex="-1" id="add-book-heading"><span id="i18n_add_book_to_readium_library">Add Book To SmartRead Library:</span></h3>
+			</div>
+
+			<div class="modal-body">
+				<form class="form-horizontal">
+
+					<div class="control-group">
+						<label for="files"><span id="i18n_from_local_file">From Local File:</span>
+						</label>
+						<div class="controls">
+							<input type="file" id="files" name="files[]" multiple />
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="modal-footer">
+				<button id='url-button' class='btn btn-primary'>Add Book</button>
+				<a href="#" class="btn" data-dismiss="modal" role="button">Cancel</a>
+			</div>
+
+			<div class="offscreenText">Add Book End</div>
+		</div><!--end panel-->
+
+		<div id='progress-container' class='span5' style="display: none" role="status" aria-live="assertive">
+		</div><!--progress holder-->
+	
+
+	<script src="/lib/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+	<!-- This one file: contains a bunch of libs minified and concatenated together -->
+	<script src="/scripts/libs/plugins.js" type="text/javascript"></script>
+
+	<script src="/lib/zip.js" type="text/javascript"></script><!--控制Loading Library的显示-->
+	<script src="/lib/lodash.min.js" type="text/javascript"></script>
+
+	<script src='/scripts/80bc6b24beb209c1b0044f69e76bd65a.js' type='text/javascript'></script><!--控制Loading Library的显示-->
+
+
+	<script src="/scripts/utils/google_analytics_loader.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>
